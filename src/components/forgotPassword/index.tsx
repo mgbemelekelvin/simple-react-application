@@ -37,7 +37,7 @@ function ForgotPassword(props: any) {
 
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/v1/forgot-password-onetime-login",
+                "https://test.laslas.org/api/v1/forgot-password-onetime-login",
                 values, {
                     headers: {
                         'Content-Type': 'application/json',

@@ -37,7 +37,7 @@ function ConfirmResetPassword(props: any) {
     //verifying code
     useEffect(() => {
         axios
-            .post("http://localhost:8000/api/v1/verify-forgot-password",{
+            .post("https://test.laslas.org/api/v1/verify-forgot-password",{
                 'code':code,
             },{
                 headers: {

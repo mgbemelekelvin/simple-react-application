@@ -20,7 +20,7 @@ function Home() {
     const logout = async() => {
         try {
             const response = await axios.post(
-                "http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/logout",
+                "https://test.laslas.org/api/v1/logout",
                 {},
                 {
                     headers: {

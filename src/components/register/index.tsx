@@ -38,7 +38,7 @@ function Register(props: any) {
 
         try {
             const response = await axios.post(
-                "http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/users",
+                "https://test.laslas.org/api/v1/users",
                 values, {
                     headers: {
                         'Content-Type': 'application/json',
