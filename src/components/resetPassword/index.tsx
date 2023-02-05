@@ -1,30 +1,22 @@
 import {useEffect, useState} from "react";
-import {useParams, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useIsAuthenticated} from "react-auth-kit";
 import {
     HeadingXXLarge,
-    HeadingXLarge,
-    HeadingLarge,
-    HeadingMedium,
-    HeadingSmall,
-    HeadingXSmall,
 } from "baseui/typography";
 import {
-    Container,
     ErrorText,
-    InnerContainer,
     InputWrapper,
-    StyledInput, StyledSelect,
+    StyledInput,
 } from "../commons";
 import {Button} from "baseui/button";
 import axios, {AxiosError} from "axios";
 import {useFormik} from "formik";
 
-function ResetPassword(props: any) {
+function ResetPassword() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const isAuthenticated = useIsAuthenticated()
-    const { code } = useParams();
     //check is user is authenticated
     useEffect(() => {
         if(isAuthenticated()){

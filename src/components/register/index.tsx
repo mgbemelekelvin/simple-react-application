@@ -3,24 +3,19 @@ import {useNavigate} from "react-router-dom";
 import {useIsAuthenticated} from "react-auth-kit";
 import {
     HeadingXXLarge,
-    HeadingXLarge,
-    HeadingLarge,
-    HeadingMedium,
-    HeadingSmall,
-    HeadingXSmall,
 } from "baseui/typography";
 import {
     Container,
     ErrorText,
     InnerContainer,
     InputWrapper,
-    StyledInput, StyledSelect,
+    StyledInput,
 } from "../commons";
 import {Button} from "baseui/button";
 import axios, {AxiosError} from "axios";
 import {useFormik} from "formik";
 
-function Register(props: any) {
+function Register() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const isAuthenticated = useIsAuthenticated()
@@ -37,7 +32,7 @@ function Register(props: any) {
         setError("");
 
         try {
-            const response = await axios.post(
+           await axios.post(
                 "https://test.laslas.org/api/v1/users",
                 values, {
                     headers: {
@@ -168,7 +163,7 @@ function Register(props: any) {
                         <Button size="large" kind="primary" isLoading={formik.isSubmitting}>
                             Register
                         </Button>
-                        <a href="login" style={{marginLeft:'20px'}}>
+                        <a href="/login" style={{marginLeft:'20px'}}>
                             Or Login
                         </a>
                     </InputWrapper>

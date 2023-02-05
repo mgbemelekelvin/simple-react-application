@@ -1,13 +1,6 @@
 import { Button } from "baseui/button";
-import { Input } from "baseui/input";
-import styled from "styled-components";
 import {
   HeadingXXLarge,
-  HeadingXLarge,
-  HeadingLarge,
-  HeadingMedium,
-  HeadingSmall,
-  HeadingXSmall,
 } from "baseui/typography";
 import {
   Container,
@@ -23,7 +16,7 @@ import { useState, useEffect  } from "react";
 import { useNavigate } from "react-router-dom";
 import { useIsAuthenticated } from 'react-auth-kit';
 
-function Login(props: any) {
+function Login() {
   const [error, setError] = useState("");
   const signIn = useSignIn();
   const navigate = useNavigate();
@@ -113,17 +106,17 @@ function Login(props: any) {
             <Button size="large" kind="primary" isLoading={formik.isSubmitting}>
               Login
             </Button>
-            <a href="register" style={{marginLeft:'20px'}}>
+            <a href="/register" style={{marginLeft:'20px'}}>
               Or Register
             </a>
           </InputWrapper>
           <InputWrapper>
-            <a href="forgot-password" style={{marginLeft:'20px'}}>
+            <a href="/forgot-password" style={{marginLeft:'20px'}}>
              Forgot Password?
             </a>
           </InputWrapper>
           <InputWrapper>
-            <a href="onetime-login" style={{marginLeft:'20px'}}>
+            <a href="/onetime-login" style={{marginLeft:'20px'}}>
              One Time Login
             </a>
           </InputWrapper>

@@ -3,24 +3,20 @@ import {useNavigate} from "react-router-dom";
 import {useIsAuthenticated} from "react-auth-kit";
 import {
     HeadingXXLarge,
-    HeadingXLarge,
     HeadingLarge,
-    HeadingMedium,
-    HeadingSmall,
-    HeadingXSmall,
 } from "baseui/typography";
 import {
     Container,
     ErrorText,
     InnerContainer,
     InputWrapper,
-    StyledInput, StyledSelect,
+    StyledInput,
 } from "../commons";
 import {Button} from "baseui/button";
 import axios, {AxiosError} from "axios";
 import {useFormik} from "formik";
 
-function ForgotPassword(props: any) {
+function ForgotPassword() {
     const [error, setError] = useState("");
     const navigate = useNavigate();
     const isAuthenticated = useIsAuthenticated()
@@ -36,7 +32,7 @@ function ForgotPassword(props: any) {
         setError("");
 
         try {
-            const response = await axios.post(
+            await axios.post(
                 "https://test.laslas.org/api/v1/forgot-password-onetime-login",
                 values, {
                     headers: {
@@ -88,7 +84,7 @@ function ForgotPassword(props: any) {
                         </Button>
                     </InputWrapper>
                     <InputWrapper>
-                        <a href="login" style={{marginLeft:'20px'}}>
+                        <a href="/login" style={{marginLeft:'20px'}}>
                             Or Login
                         </a>
                     </InputWrapper>
@@ -98,7 +94,7 @@ function ForgotPassword(props: any) {
                 <HeadingXXLarge>Forgot Password Email verification Sent!!!</HeadingXXLarge>
                 <HeadingLarge>Check Your Email for instructions on how to reset your password.</HeadingLarge>
                 <InputWrapper>
-                    <a href="login" style={{marginLeft:'20px'}}>
+                    <a href="/login" style={{marginLeft:'20px'}}>
                         Return to Login
                     </a>
                 </InputWrapper>

@@ -30,7 +30,7 @@ function Dashboard() {
     }
     const logout = async() => {
         try {
-            const response = await axios.post(
+            await axios.post(
                 "https://test.laslas.org/api/v1/logout",
                 {},
                 {

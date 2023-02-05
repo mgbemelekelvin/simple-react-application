@@ -2,26 +2,16 @@ import {useEffect, useState} from "react";
 import {useParams, useNavigate } from "react-router-dom";
 import {useIsAuthenticated} from "react-auth-kit";
 import {
-    HeadingXXLarge,
-    HeadingXLarge,
     HeadingLarge,
-    HeadingMedium,
-    HeadingSmall,
-    HeadingXSmall,
 } from "baseui/typography";
 import {
     Container,
-    ErrorText,
     InnerContainer,
-    InputWrapper,
-    StyledInput, StyledSelect,
 } from "../commons";
-import {Button} from "baseui/button";
 import axios, {AxiosError} from "axios";
 import { ResetPassword } from "../resetPassword";
 
-function ConfirmResetPassword(props: any) {
-    const [error, setError] = useState("");
+function ConfirmResetPassword() {
     const navigate = useNavigate();
     const isAuthenticated = useIsAuthenticated()
     const { code } = useParams();
