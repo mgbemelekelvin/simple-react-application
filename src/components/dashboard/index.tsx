@@ -68,7 +68,7 @@ function Dashboard() {
             setUsers(result.data.data);
         }
         fetchData();
-    }, []);
+    }, [access_token]);
 
     return (
         <Container>

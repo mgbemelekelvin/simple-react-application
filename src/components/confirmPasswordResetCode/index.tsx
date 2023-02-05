@@ -45,7 +45,7 @@ function ConfirmResetPassword() {
                 else if (err && err instanceof Error) alert(err.message);
                 navigate("/login");
             });
-    }, []);
+    }, [code, navigate]);
 
     if (isLoading){
         return (
