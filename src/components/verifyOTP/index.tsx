@@ -36,7 +36,7 @@ function VerifyOTP(props: any) {
         setError("");
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/v1/verify-onetime-login",
+                "http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/verify-onetime-login",
                 values, {
                     headers: {
                         'Content-Type': 'application/json',

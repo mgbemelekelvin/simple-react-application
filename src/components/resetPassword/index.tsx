@@ -36,7 +36,7 @@ function ResetPassword(props: any) {
         setError("");
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/v1/reset-password",
+                "http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/reset-password",
                 values, {
                     headers: {
                         'Content-Type': 'application/json',

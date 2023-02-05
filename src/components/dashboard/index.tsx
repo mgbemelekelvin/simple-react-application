@@ -31,7 +31,7 @@ function Dashboard() {
     const logout = async() => {
         try {
             const response = await axios.post(
-                "http://localhost:8000/api/v1/logout",
+                "http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/logout",
                 {},
                 {
                     headers: {
@@ -57,7 +57,7 @@ function Dashboard() {
     //fetching users
     useEffect(() => {
         async function fetchData() {
-            const result = await axios.get('http://localhost:8000/api/v1/users',
+            const result = await axios.get('http://simplelumenauthapi-env.eba-ax2ynbta.us-east-1.elasticbeanstalk.com/api/v1/users',
                 {
                     headers: {
                         'Content-Type': 'application/json',
