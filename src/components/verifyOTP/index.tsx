@@ -64,7 +64,7 @@ function VerifyOTP() {
 
     const formik = useFormik({
         initialValues: {
-            email: sessionStorage.getItem('emailResetPassword'),
+            email: sessionStorage.getItem('emailOTP'),
             code: "",
         },
         onSubmit,

@@ -55,7 +55,7 @@ function OnetimeLogin() {
     const formik = useFormik({
         initialValues: {
             verificationType: "One Time Login",
-            email: sessionStorage.getItem('emailOTP'),
+            email: "",
         },
         onSubmit,
     });
