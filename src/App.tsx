@@ -16,6 +16,7 @@ const AppContainer = styled.div`
   height: 100%;
 `;
 
+//Testing the pipeline
 function App() {
   return (
     <AppContainer>
