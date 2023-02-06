@@ -42,7 +42,8 @@ function OnetimeLogin() {
                     }
                 }
             );
-            sessionStorage.setItem('emailOTP', response.data.data.email)
+            console.log(values);
+            sessionStorage.setItem('emailOTP', values.email)
             setIsLoading(true);
         } catch (err) {
             if (err && err instanceof AxiosError)
