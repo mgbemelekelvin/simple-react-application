@@ -16,6 +16,7 @@ const AppContainer = styled.div`
   height: 100%;
 `;
 
+//testing the continuous Integration
 function App() {
   return (
     <AppContainer>
